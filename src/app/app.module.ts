@@ -5,11 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { LeftBarComponent } from './components/left-bar/left-bar.component';
+import { RightBarComponent } from './components/right-bar/right-bar.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    NavBarComponent,
+    LeftBarComponent,
+    RightBarComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
