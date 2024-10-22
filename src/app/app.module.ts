@@ -9,6 +9,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { RightBarComponent } from './components/right-bar/right-bar.component';
 import { MainComponent } from './components/main/main.component';
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { MainComponent } from './components/main/main.component';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

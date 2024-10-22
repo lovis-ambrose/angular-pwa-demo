@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './left-bar.component.scss'
 })
 export class LeftBarComponent {
+  loading: boolean = false;
 
+  load() {
+    this.loading = true;
+
+    setTimeout(() => {
+      this.loading = false
+    }, 2000);
+  }
 }
