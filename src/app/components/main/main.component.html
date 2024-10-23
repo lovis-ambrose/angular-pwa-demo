@@ -6,16 +6,16 @@
   </div>
 
   <div class="card mt-4">
-    <img src="/icons/dev/banner2.jpg" class="card-img-top" alt="banner">
+    <img src="/icons/dev/banner2.jpg" class="card-img-top pointer" alt="banner">
     <div class="card-body">
       <div class="d-flex mt-4 gap-3 mb-4">
-        <a href="#"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic"></a>
+        <a class="pointer"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic"></a>
         <div>
           Akiwor <br>
           <span>Oct 21 (1 day ago)</span>
         </div>
       </div>
-      <a href="#" class="text-decoration-none text-black"><h2 class="card-title">Multithreading Concepts Part 2 : Starvation</h2></a>
+      <a [routerLink]="['username/post-title']" class="text-decoration-none text-black pointer"><h2 class="card-title">Multithreading Concepts Part 2 : Starvation</h2></a>
       <div class="mt-4">
         <button class="btn btn-outline-secondary border-0"><i class="bi bi-hash">java</i></button>
         <button class="btn btn-outline-secondary border-0"><i class="bi bi-hash">Starvation</i></button>

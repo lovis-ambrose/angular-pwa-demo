@@ -9,6 +9,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LeftBarComponent } from './components/left-bar/left-bar.component';
 import { RightBarComponent } from './components/right-bar/right-bar.component';
 import { MainComponent } from './components/main/main.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MainComponent } from './components/main/main.component';
     LeftBarComponent,
     RightBarComponent,
     MainComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,9 @@ import { MainComponent } from './components/main/main.component';
 
   ],
   providers: [],
+  exports: [
+    NavBarComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
