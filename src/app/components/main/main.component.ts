@@ -1,10 +1,14 @@
 import {Component} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'bb-main',
+  standalone: true,
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  styleUrl: './main.component.scss',
+  imports: [
+    RouterModule
+  ]
 })
 export class MainComponent {
 }

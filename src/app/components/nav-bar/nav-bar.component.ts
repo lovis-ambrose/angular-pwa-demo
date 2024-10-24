@@ -1,10 +1,14 @@
 import {Component} from "@angular/core";
-import {Router} from "@angular/router";
+import {Router, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'bb-nav-bar',
+  standalone: true,
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+  styleUrl: './nav-bar.component.scss',
+  imports: [
+    RouterModule
+  ]
 })
 export class NavBarComponent {
 

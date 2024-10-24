@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'bb-left-bar',
+  standalone: true,
   templateUrl: './left-bar.component.html',
   styleUrl: './left-bar.component.scss'
 })
