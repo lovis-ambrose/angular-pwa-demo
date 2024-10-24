@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'bb-left-bar',
   standalone: true,
+  imports: [],
   templateUrl: './left-bar.component.html',
   styleUrl: './left-bar.component.scss'
 })

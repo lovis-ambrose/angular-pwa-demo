@@ -8,14 +8,14 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "standalone": false,
+          "standalone": true,
           "prefix": "bb"
         },
         "@schematics/angular:directive": {
-          "standalone": false
+          "standalone": true
         },
         "@schematics/angular:pipe": {
-          "standalone": false
+          "standalone": true
         }
       },
       "root": "",

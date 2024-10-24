@@ -7,13 +7,13 @@ import {ProfileBarComponent} from "../profile-bar/profile-bar.component";
 @Component({
   selector: 'bb-post-details',
   standalone: true,
-  templateUrl: './post-details.component.html',
   imports: [
     NavBarComponent,
     SideNavComponent,
     PostBodyComponent,
     ProfileBarComponent
   ],
+  templateUrl: './post-details.component.html',
   styleUrl: './post-details.component.scss'
 })
 export class PostDetailsComponent {
