@@ -1,5 +1,4 @@
-export interface Person {
+export interface City {
   name: string;
-  email: string;
-  phone: string;
+  code: string;
 }

@@ -1,15 +1,17 @@
-import { NgModule, isDevMode } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {isDevMode, NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { LeftBarComponent } from './components/left-bar/left-bar.component';
-import { RightBarComponent } from './components/right-bar/right-bar.component';
-import { MainComponent } from './components/main/main.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {HomeComponent} from './home/home.component';
+import {NavBarComponent} from './components/nav-bar/nav-bar.component';
+import {LeftBarComponent} from './components/left-bar/left-bar.component';
+import {RightBarComponent} from './components/right-bar/right-bar.component';
+import {MainComponent} from './components/main/main.component';
+import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
+import {PostDetailsComponent} from "./posts/post-details/post-details.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -20,9 +22,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     RightBarComponent,
     MainComponent,
     PageNotFoundComponent,
+    PostDetailsComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
@@ -33,9 +37,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
   ],
   providers: [],
-  exports: [
-    NavBarComponent,
-  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
