@@ -1,1 +1,162 @@
-<p>post-body works!</p>
+<div class="card">
+  <img src="/icons/dev/banner2.jpg" class="card-img-top pointer" alt="banner">
+  <div class="card-body">
+    <div class="d-flex mt-4 gap-3 mb-4">
+      <a class="pointer"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic"></a>
+      <div>
+        Akiwor <br>
+        <span>Posted on Oct 21</span>
+      </div>
+    </div>
+    <div class="mt-4 mb-4">
+        <div class="d-flex gap-5">
+          <div class="d-flex align-items-center me-4">
+            <i class="bi bi-heart-fill text-danger fs-3"></i>
+            <span class="m-2">49</span>
+          </div>
+          <div class="d-flex align-items-center me-4">
+            <i class="bi bi-headset text-primary fs-3"></i>
+            <span class="m-2">5</span>
+          </div>
+          <div class="d-flex align-items-center me-4">
+            <i class="bi bi-emoji-frown-fill text-warning fs-3"></i>
+            <span class="m-2">4</span>
+          </div>
+          <div class="d-flex align-items-center me-4">
+            <i class="bi bi-hand-thumbs-up text-warning fs-3"></i>
+            <span class="m-2">4</span>
+          </div>
+          <div class="d-flex align-items-center me-4">
+            <i class="bi-fire text-danger fs-3"></i>
+            <span class="m-2">6</span>
+          </div>
+        </div>
+    </div>
+    <a class="text-decoration-none text-black pointer"><h1 class="card-title">Multithreading Concepts Part 2 : Starvation</h1></a>
+    <div class="mt-4">
+      <button class="btn btn-outline-warning border-0"><i class="bi bi-hash">java</i></button>
+      <button class="btn btn-outline-primary border-0"><i class="bi bi-hash">Starvation</i></button>
+      <button class="btn btn-outline-success border-0"><i class="bi bi-hash">multithreading</i></button>
+      <button class="btn btn-outline-info border-0"><i class="bi bi-hash">softwaredevelopment</i></button>
+    </div>
+    <div class="mt-4">
+      <h2 class="card-title">Introduction: Supercharge Your Stylesheets with These Handy CSS Tricks</h2>
+      <p>
+        Hey there, fellow UI developers! Are you ready to add some pizzazz to your stylesheets? We all know that CSS can be both a blessing and a curse.
+        It's incredibly powerful, but sometimes it feels like we're wrestling with a stubborn octopus trying to get our layouts just right.
+        That's why I've put together this collection of 10 small but mighty CSS code snippets that'll make your life easier and your designs shine.
+      </p>
+      <p>
+        These aren't just any old snippets – they're the kind of tricks that'll have you slapping your forehead and saying,
+        "Why didn't I think of that?" Whether you're a CSS newbie or a seasoned pro, I guarantee you'll find something useful here.
+        So, grab your favorite beverage, fire up your code editor, and let's dive into some CSS magic!
+      </p>
+    </div>
+
+    <div class="mt-4">
+      <ol>
+        <li class="fs-5">
+          <h3>The Magical Centering Trick</h3>
+          <p>
+            We've all been there – trying to center a div both vertically and horizontally, and ending up with a tangled mess of floats and margins.
+            Well, say goodbye to those frustrating days because this little snippet is about to become your new best friend:
+          </p>
+        </li>
+        <li class="fs-5">
+          <h3>Smooth Scrolling for the Win</h3>
+          <p>
+            Want to add a touch of elegance to your page navigation?
+            This snippet will give you buttery-smooth scrolling with just a few lines of code:
+          </p>
+            <div class="position-relative">
+              <pre class="bg-black p-3 rounded overflow-x-auto">
+                <code class="text-light">
+                  html &#123;
+                        scroll-behavior: smooth;
+                  &#125;
+                </code>
+              </pre>
+              <button
+                class="btn btn-outline-primary position-absolute top-0 end-0"
+                pTooltip="Copy"
+                (click)="copyCode()">
+                <i class="bi bi-copy"></i>
+              </button>
+            </div>
+          <p>
+            That's it! This simple declaration tells the browser to use smooth animations when scrolling to anchor links on your page.
+            It's a small change that can make a big difference in how polished and professional your site feels.
+          </p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="mt-4">
+      <div class="d-flex justify-content-between">
+        <div class="d-flex gap-3">
+          <h1>Top Comments (8)</h1>
+          <div class="dropdown mt-2">
+            <button class="btn btn-outline-light text-black" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" pTooltip="sort">
+              <i class="bi bi-arrow-down-up"></i>
+            </button>
+            <ul class="dropdown-menu gap-2" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#"><b>Top</b> <p>Most up-voted and relevant comments will be first</p></a></li>
+              <li><a class="dropdown-item" href="#"><b>Latest</b> <p>Most Recent comments will be first</p></a></li>
+              <li><a class="dropdown-item" href="#"><b>Oldest</b> <p>The oldest comments will be first</p></a></li>
+            </ul>
+          </div>
+        </div>
+        <button class="btn btn-outline-light text-black border-secondary border-3">Subscribe</button>
+      </div>
+
+      <div class="d-flex mt-4 gap-3 mb-4">
+        <a class="pointer"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic"></a>
+        <div class="w-100">
+          <div>
+            <form [formGroup]="formGroup">
+              <p-editor formControlName="text" [style]="{ height: '220px' }" />
+              <div class="d-flex gap-2 mt-2">
+                <button class="btn btn-primary disabled">Submit</button>
+                <button class="btn btn-secondary disabled">Preview</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex mt-4 gap-3 mb-4">
+      <a class="pointer"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic"></a>
+      <div class="card w-100 p-2">
+        <div class="d-flex justify-content-between">
+          <div>
+            <button class="btn btn-outline-light rounded-5 fw-medium text-black">James O</button>
+            <span><i>Posted on Oct 21</i></span>
+          </div>
+          <button class="btn btn-outline-light rounded-5 text-black"><i class="bi bi-three-dots"></i></button>
+        </div>
+        <p>
+          One basic question always bother me.
+        </p>
+        <p>
+          Let's say I want to deploy my NodeJs project on hostinger vps, so without using docker approach I will
+          install NodeJs MySQL express etc and then I will pull code from my repo and install dependency and then start pm2.
+        </p>
+        <p>
+          But Now let's say my manager asked me to implement docker, I will create the docker image then container and then
+          let say I deployed that container, now what?
+        </p>
+        <p>
+          Now that container contain my entire code?
+          Like I won't need pull from the GitHub to bring my whole code into my VPS?
+        </p>
+        <div class="d-flex gap-2 mt-2">
+          <button class="btn btn-outline-light text-black"><i class="bi bi-heart"></i> 2 likes</button>
+          <button class="btn btn-outline-light text-black"><i class="bi bi-chat"></i> reply</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center bg-white p-2 rounded-pill shadow-sm">
+  <div *ngFor="let reaction of reactions" class="text-center mx-1 p-1">
+    <button
+      class="btn btn-outline-light d-flex flex-column rounded-4 align-items-center"
+      pTooltip="{{ reaction.tooltip }}"
+      tooltipPosition="bottom">
+      <i class="fs-4" [ngClass]="reaction.icon"></i>
+      <span class="text-muted small">{{ reaction.count }}</span>
+    </button>
+  </div>
+</div>

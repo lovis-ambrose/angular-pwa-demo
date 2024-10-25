@@ -2,11 +2,11 @@
   <bb-nav-bar />
 </div>
 <div class="m-2">
-  <div class="d-flex row">
-    <div class="col-1">
+  <div class="d-flex row mt-5">
+    <div class="col-1 position-fixed h-100 z-1">
       <bb-side-nav />
     </div>
-    <div class="col-8">
+    <div class="col-8 offset-1"> <!-- Add offset-1 to prevent content from going under the fixed nav -->
       <bb-post-body />
     </div>
     <div class="col-3">

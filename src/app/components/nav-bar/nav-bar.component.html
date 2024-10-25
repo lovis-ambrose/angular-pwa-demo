@@ -13,14 +13,13 @@
         </form>
       </div>
       <div class="text-end d-inline-flex align-items-center">
-        <button class="btn btn-outline-primary me-3" [routerLink]="['new']">Create Post</button>
-        <a href="#" class="position-relative me-3">
-          <i class="bi bi-bell fs-2"></i>
-          <span class="position-absolute mt-2 start-100 translate-middle badge bg-danger">
-          8 <span class="visually-hidden">unread messages</span>
-          </span>
+        <button class="btn btn-outline-primary me-3" (click)="createNew()">Create Post</button>
+        <a >
+          <div class="flex justify-content-center me-4 pointer" pTooltip="Notifications" tooltipPosition="left">
+            <i class="bi bi-bell fs-3" pBadge value="2" severity="danger"></i>
+          </div>
         </a>
-        <a href="#"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic"></a>
+        <a href="#"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic" pTooltip="Account" tooltipPosition="left"></a>
       </div>
 
     </div>

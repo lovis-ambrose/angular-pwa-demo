@@ -1,0 +1,19 @@
+.btn:hover i {
+  color: red;
+}
+
+.center {
+  margin-left: 10px;
+}
+
+.reaction-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+bb-reactions {
+  position: absolute;
+  top: -10%; /* Adjust this value according to your design */
+  left: 70px;
+  z-index: 100;
+}

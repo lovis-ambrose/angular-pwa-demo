@@ -1,0 +1,54 @@
+<div class="p-5 m-0 bg-white rounded ">
+  <div class="mb-3">
+    <div class="card flex justify-content-center">
+      <p-toast />
+      <p-fileUpload
+        name="demo[]"
+        url="https://www.primefaces.org/cdn/api/upload.php"
+        (onUpload)="onUpload($event)"
+        [multiple]="true"
+        accept="image/*"
+        maxFileSize="1000000">
+        <ng-template pTemplate="content">
+          <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">
+              {{ file.name }} - {{ file.size }} bytes
+            </li>
+          </ul>
+        </ng-template>
+      </p-fileUpload>
+    </div>
+  </div>
+
+  <div class="title-section">
+    <textarea
+      type="text"
+      class="p-2 fs-3 border-0 mb-2 fw-bold w-100 focus-none"
+      placeholder="New post title here..."
+      [(ngModel)]="title"
+      >
+    </textarea>
+  </div>
+
+  <div class="w-100 mb-2">
+    <input
+      type="text"
+      class="w-100 p-2 border-0 focus-none mb-2"
+      placeholder="Add up to 4 tags..."
+      [(ngModel)]="tags"
+    >
+  </div>
+
+  <quill-editor
+    [(ngModel)]="content"
+    [placeholder]="'Write your post content here...'"
+    [styles]="{ height: '300px' }"
+  ></quill-editor>
+
+  <div class="d-flex gap-2">
+    <button class="btn btn-primary">Publish</button>
+    <button class="btn btn-light text-black btn-custom">Save Draft</button>
+    <button class="btn btn-light text-black btn-custom"><i class="bi bi-gear"></i></button>
+    <button class="btn btn-light text-black btn-custom">Revert New Changes</button>
+  </div>
+</div>

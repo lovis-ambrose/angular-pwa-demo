@@ -5,3 +5,18 @@
 .pointer {
   cursor: pointer;
 }
+
+.focus-none {
+  outline: none;
+}
+
+body {
+  background-color: rgb(250, 245, 245) !important;
+}
+
+
+.btn-custom:hover {
+  text-decoration: none;
+  color: blue !important;
+  background-color: cornflowerblue !important;
+}

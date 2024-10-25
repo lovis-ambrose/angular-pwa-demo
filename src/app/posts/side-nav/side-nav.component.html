@@ -1,1 +1,20 @@
-<p>side-nav works!</p>
+<div class="m-lg-2 start-50">
+  <div class="reaction-wrapper" (mouseenter)="showReactions()" (mouseleave)="hideReactions()">
+    <button class="btn btn-outline-light text-black border-0 row" pTooltip="Add reaction" tooltipPosition="bottom">
+      <i class="bi bi-heart-fill"></i>
+      <span>68</span>
+    </button>
+    <bb-reactions *ngIf="reactionsVisible"></bb-reactions>
+  </div>
+  <button class="btn btn-outline-light text-black border-0 row mt-2" tooltipPosition="bottom" pTooltip="comments">
+    <i class="bi bi-chat"></i>
+    <span>13</span>
+  </button>
+  <button class="btn btn-outline-light text-black border-0 row mt-2" tooltipPosition="bottom" pTooltip="save">
+    <i class="bi bi-bookmark"></i>
+    <span>103</span>
+  </button>
+  <button class="btn btn-outline-light text-black border-0 row mt-2" tooltipPosition="bottom" pTooltip="more">
+    <i class="bi bi-three-dots rounded-5 center"></i>
+  </button>
+</div>
