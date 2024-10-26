@@ -31,12 +31,12 @@
   </div>
 
   <div class="w-100 mb-2">
-    <input
+    <textarea
       type="text"
       class="w-100 p-2 border-0 focus-none mb-2"
       placeholder="Add up to 4 tags..."
       [(ngModel)]="tags"
-    >
+    ></textarea>
   </div>
 
   <quill-editor
@@ -48,7 +48,7 @@
   <div class="d-flex gap-2">
     <button class="btn btn-primary">Publish</button>
     <button class="btn btn-light text-black btn-custom">Save Draft</button>
-    <button class="btn btn-light text-black btn-custom"><i class="bi bi-gear"></i></button>
+    <button class="btn btn-light text-black btn-custom" pTooltip="Post Options" tooltipPosition="bottom" (click)="showDialog()"><i class="bi bi-gear"></i></button>
     <button class="btn btn-light text-black btn-custom">Revert New Changes</button>
   </div>
 </div>

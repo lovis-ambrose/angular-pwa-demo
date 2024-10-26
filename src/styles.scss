@@ -10,6 +10,16 @@
   outline: none;
 }
 
+.focus-blue {
+
+}
+
+input:focus {
+  outline: none;
+  border: 3px solid blue !important;
+  box-shadow: none !important;
+}
+
 body {
   background-color: rgb(250, 245, 245) !important;
 }
