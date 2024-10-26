@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnChanges, OnInit, Output} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {QuillEditorComponent, QuillModule} from "ngx-quill";
 import {TooltipModule} from 'primeng/tooltip';
@@ -30,12 +30,14 @@ import {PostOptionsComponent} from "../post-options/post-options.component";
   templateUrl: './editor.component.html',
   styleUrl: './editor.component.scss'
 })
-export class EditorComponent implements OnInit{
+export class EditorComponent implements OnInit, OnChanges{
   uploadedFiles: any[] = [];
   title: string = '';
   tags: string = '';
   content: string = '';
   ref: DynamicDialogRef | undefined;
+  @Output() formChanged = new EventEmitter<boolean>();
+  private isDirty: boolean = false;
 
   constructor(
     private _messageService: MessageService,
@@ -56,5 +58,14 @@ export class EditorComponent implements OnInit{
     this.ref = this._dialogService.open(PostOptionsComponent, {
       width: '500px',
     })
+  }
+
+  ngOnChanges() {
+    this.formChanged.emit(this.isDirty);
+  }
+
+  onFormChange() {
+    this.isDirty = true;
+    this.formChanged.emit(this.isDirty);
   }
 }
