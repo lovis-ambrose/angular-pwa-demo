@@ -26,6 +26,7 @@
       class="p-2 fs-3 border-0 mb-2 fw-bold w-100 focus-none"
       placeholder="New post title here..."
       [(ngModel)]="title"
+      (focus)="onTitleFocus()"
       (ngModelChange)="onFormChange()"
       >
     </textarea>
@@ -37,6 +38,7 @@
       class="w-100 p-2 border-0 focus-none mb-2"
       placeholder="Add up to 4 tags..."
       [(ngModel)]="tags"
+      (focus)="onTagsFocus()"
       (ngModelChange)="onFormChange()"
     ></textarea>
   </div>
@@ -45,6 +47,7 @@
     [(ngModel)]="content"
     [placeholder]="'Write your post content here...'"
     [styles]="{ height: '300px' }"
+    (onEditorCreated)="onEditorCreated($event)"
     (ngModelChange)="onFormChange()"
   ></quill-editor>
 

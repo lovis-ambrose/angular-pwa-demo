@@ -8,6 +8,7 @@ import {ToastModule} from "primeng/toast";
 import {MessageService} from "primeng/api";
 import {DialogService, DynamicDialogModule, DynamicDialogRef} from "primeng/dynamicdialog";
 import {PostOptionsComponent} from "../post-options/post-options.component";
+import Quill from "quill";
 
 @Component({
   selector: 'bb-editor',
@@ -36,8 +37,9 @@ export class EditorComponent implements OnInit, OnChanges{
   tags: string = '';
   content: string = '';
   ref: DynamicDialogRef | undefined;
-  @Output() formChanged = new EventEmitter<boolean>();
   private isDirty: boolean = false;
+  @Output() formChanged = new EventEmitter<boolean>();
+  @Output() focusChanged = new EventEmitter<string>();
 
   constructor(
     private _messageService: MessageService,
@@ -67,5 +69,19 @@ export class EditorComponent implements OnInit, OnChanges{
   onFormChange() {
     this.isDirty = true;
     this.formChanged.emit(this.isDirty);
+  }
+
+  onTitleFocus() {
+    this.focusChanged.emit('title');
+  }
+
+  onTagsFocus() {
+    this.focusChanged.emit('tags');
+  }
+
+  // Attach focus event handler to Quill editor
+  onEditorCreated(editorInstance: Quill) {
+    const editor = editorInstance.root;
+    editor.addEventListener('focus', () => this.focusChanged.emit('content'));
   }
 }

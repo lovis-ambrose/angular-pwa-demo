@@ -24,10 +24,10 @@
     <!--      something-->
     </div>
     <div class="col-8 offset-1">
-      <bb-editor (formChanged)="onFormChanged($event)" />
+      <bb-editor (formChanged)="onFormChanged($event)" (focusChanged)="onEditorFocusChange($event)" />
     </div>
     <div class="col-3">
-      <bb-tips />
+      <bb-tips [activeTip]="activeTip" />
     </div>
   </div>
 </div>

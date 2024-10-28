@@ -28,6 +28,7 @@ import { ButtonModule } from 'primeng/button';
 })
 export class CreateNewComponent {
   isFormDirty: boolean = false;
+  activeTip: string = '';
 
   constructor(
     private router: Router,
@@ -80,4 +81,9 @@ export class CreateNewComponent {
   goBackHome() {
     this.router.navigateByUrl('');
   }
+
+  onEditorFocusChange(focusedField: string) {
+    this.activeTip = focusedField;
+  }
+
 }

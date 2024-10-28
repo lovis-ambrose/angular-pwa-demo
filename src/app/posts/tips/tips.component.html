@@ -1,1 +1,72 @@
-<p>tips works!</p>
+<ng-container [ngSwitch]="activeTip">
+  <div *ngSwitchCase="'title'">
+    <h5>Writing a Great Post Title</h5>
+    <ul>
+      <li>
+        Think of your post title as a super short (but compelling!) description — like an overview of the actual post in one short sentence.
+      </li>
+      <li>
+        Use keywords where appropriate to help ensure people can find your post by search.
+      </li>
+    </ul>
+  </div>
+
+  <div *ngSwitchCase="'tags'">
+    <h5>Tagging Guidelines</h5>
+    <ul>
+      <li>
+        Tags help people find your post - think of them as the topics or categories that best describe your post.
+      </li>
+      <li>
+        Add up to four comma-separated tags per post. Use existing tags whenever possible.
+      </li>
+      <li>
+        Some tags have special posting guidelines - double check to make sure your post complies with them.
+      </li>
+    </ul>
+  </div>
+
+  <div *ngSwitchCase="'content'">
+    <h5>Editor Basics</h5>
+    <ul>
+      <li>
+        Use <a href="#" class="text-decoration-none">Markdown</a> to write and format posts.
+        <p-tree [value]="nodes" [metaKeySelection]="false">
+          <ng-template let-node pTemplate="label">
+            <div class="tree-label">
+              <div class="tree-header" [ngClass]="{ 'tree-header-bold': node.data.isBold }">
+            <span *ngIf="node.data.isHeader; else nonHeader">
+              <span *ngFor="let i of [].constructor(node.data.headerLevel); let j=index">#</span>
+              {{ node.label }}
+            </span>
+                <ng-template #nonHeader>
+                  <span [ngClass]="{ 'tree-italic': node.data.isItalic }">{{ node.label }}</span>
+                </ng-template>
+              </div>
+              <div class="tree-content">
+            <span *ngIf="node.data.isLink; else nonLink">
+              <a [href]="node.data.link" target="_blank">{{ node.label }}</a>
+            </span>
+                <ng-template #nonLink>
+                  <span>{{ node.label }}</span>
+                </ng-template>
+              </div>
+            </div>
+          </ng-template>
+        </p-tree>
+      </li>
+      <li>
+        Embed rich content such as Tweets, YouTube videos, etc. Use the complete URL:
+        <span class="bg-secondary-subtle rounded p-1">&#123;% embed https://... %&#125;.</span> <br>
+        <a href="#" class="text-decoration-none">See a list of supported embeds.</a>
+      </li>
+      <li>
+        In addition to images for the post's content, you can also drag and drop a cover image.
+      </li>
+    </ul>
+  </div>
+
+<!--          <div *ngSwitchDefault>-->
+<!--            <p>Select a field to see tips.</p>-->
+<!--          </div>-->
+</ng-container>
