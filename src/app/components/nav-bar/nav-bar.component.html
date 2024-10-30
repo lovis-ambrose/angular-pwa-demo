@@ -22,7 +22,12 @@
             <i class="bi bi-bell fs-3" pBadge value="2" severity="danger"></i>
           </div>
         </a>
-        <a href="#"><img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic" pTooltip="Account" tooltipPosition="left"></a>
+        <a class="pointer" (click)="toggleProfileDropdown()">
+          <img src="/icons/dev/profile.jpeg" class="rounded-5" height="40" alt="profile pic" pTooltip="Account" tooltipPosition="left">
+        </a>
+        <div class="profile-wrapper">
+          <bb-profile-dropdown *ngIf="profileDropdownVisible"/>
+        </div>
       </div>
 
     </div>

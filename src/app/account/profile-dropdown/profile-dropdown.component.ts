@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'bb-profile-dropdown',
@@ -9,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class ProfileDropdownComponent {
 
+  constructor(
+    private _router: Router,
+  ) {
+  }
+  goToCreateNew() {
+    this._router.navigateByUrl('new');
+  }
+
+  goToSettings() {
+    this._router.navigateByUrl('settings');
+  }
 }

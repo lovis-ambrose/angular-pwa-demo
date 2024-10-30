@@ -1,1 +1,128 @@
-<p>profile-settings works!</p>
+<div class="sticky-top">
+  <bb-nav-bar />
+</div>
+<div class="container">
+  <div class="d-flex m-2">
+    <div class="col-3 d-flex flex-column">
+      <button class="btn btn-outline-light text-secondary border-0 text-start m-1 p-2 text-start active"><i class="bi bi-emoji-smile-fill me-2 text-warning"></i>Profile</button>
+      <button class="btn btn-outline-light text-secondary border-0 text-start m-1 p-2 text-start"><i class="bi bi-gear me-2"></i>Customizations</button>
+      <button class="btn btn-outline-light text-secondary border-0 text-start m-1 p-2 text-start"><i class="bi bi-bell-fill text-danger me-2"></i>Notifications</button>
+      <button class="btn btn-outline-light text-secondary border-0 text-start m-1 p-2 text-start"><i class="bi bi-person-square me-2"></i>Account</button>
+      <button class="btn btn-outline-light text-secondary border-0 text-start m-1 p-2 text-start"><i class="bi bi-building me-2"></i>Organisation</button>
+      <button class="btn btn-outline-light text-secondary border-0 text-start m-1 p-2 text-start"><i class="bi bi-emoji-smile-fill me-2 text-warning"></i>Extensions</button>
+    </div>
+
+    <div class="col-8 m-2">
+      <a class="pointer fw-bold fs-2 text-decoration-none">&#64;lovisambrose</a>
+      <div class="card p-4 gap-2 mt-4">
+        <button class="btn btn-secondary text-white"><i class="bi bi-facebook me-2"></i>Connect Facebook Account</button>
+        <button class="btn btn-secondary text-white"><i class="bi bi-alipay me-2"></i>Connect Forem Account</button>
+      </div>
+
+
+      <div class="card p-4 gap-2 mt-4">
+        <h1>User</h1>
+        <div class="mb-4">
+          <label>Name</label>
+          <input class="form-control p-2 mt-2" type="text" placeholder="full name" aria-label="name">
+        </div>
+        <div class="mb-4">
+          <label>Email</label>
+          <input class="form-control p-2 mt-2" type="email" placeholder="name@example.com" aria-label="name">
+        </div>
+        <div class="mb-4">
+          <button class="btn btn-outline-light text-secondary w-100 text-start border-0" (click)="toggleCheckbox()">
+            <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckChecked" [(ngModel)]="isChecked" >
+            <label class="form-check-label" for="flexCheckChecked">Display email on profile</label>
+          </button>
+        </div>
+        <div class="mb-4">
+          <label>Username</label>
+          <input class="form-control p-2 mt-2" type="text" placeholder="username" aria-label="name">
+        </div>
+        <div class="mb-4">
+          <label>Profile Image</label>
+          <button class="btn btn-outline-light text-secondary w-100 text-start border-0">
+            <img [ngSrc]="previewUrl" class="rounded-5 me-2" height="40" width="40" alt="profile pic">
+            <input type="file" (change)="onFileSelected($event)" id="fileInput" hidden />
+            <label for="fileInput" class="btn btn-secondary">Choose File</label>
+            <span *ngIf="selectedFileName" class="ms-2">{{ selectedFileName }}</span>
+            <span *ngIf="!selectedFileName" class="ms-2">No file chosen</span>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="card p-4 gap-2 mt-4">
+        <h1>Basic</h1>
+        <div class="mb-4">
+          <label>Website URL</label>
+          <input class="form-control p-2 mt-2" type="url" placeholder="https://yoursite.com" aria-label="name">
+        </div>
+        <div class="mb-4">
+          <label>Location</label>
+          <input class="form-control p-2 mt-2" type="text" placeholder="city, Country" aria-label="name">
+        </div>
+        <div class="mb-4">
+          <label>Bio</label>
+          <textarea class="form-control p-2 mt-2" name="bio" id="bio" placeholder="briefly describe yourself"></textarea>
+        </div>
+      </div>
+
+
+      <div class="card p-4 gap-2 mt-4">
+        <h1>Coding</h1>
+        <div class="mb-4">
+          <label>Currently learning</label>
+          <p class="text-secondary">What are you learning right now? What are the new tools and languages you're picking up right now?</p>
+          <textarea class="form-control p-2 mt-2" name="learning" id="learning" placeholder="I am currently learning"></textarea>
+        </div>
+        <div class="mb-4">
+          <label>Available for</label>
+          <p class="text-secondary">What kinds of collaborations or discussions are you available for? What's a good reason to say Hey! to you these days?</p>
+          <textarea class="form-control p-2 mt-2" name="available" id="available" placeholder="I am available for...."></textarea>
+        </div>
+        <div class="mb-4">
+          <label>Skills/Languages</label>
+          <p class="text-secondary">What tools and languages are you most experienced with? Are you specialized or more of a generalist?</p>
+          <textarea class="form-control p-2 mt-2" name="skills" id="skills" placeholder="I have these skills.."></textarea>
+        </div>
+        <div class="mb-4">
+          <label>Currently hacking on</label>
+          <p class="text-secondary">What projects are currently occupying most of your time?</p>
+          <textarea class="form-control p-2 mt-2" name="hacking" id="hacking" placeholder="I am currently working on.."></textarea>
+        </div>
+      </div>
+
+      <div class="card p-4 gap-2 mt-4">
+        <h1>Personal</h1>
+        <div class="mb-4">
+          <label>Pronouns</label>
+          <input class="form-control p-2 mt-2" type="text" placeholder="eg He/Him..." aria-label="name">
+        </div>
+      </div>
+
+      <div class="card p-4 gap-2 mt-4">
+        <h1>Work</h1>
+        <div class="mb-4">
+          <label>Work</label>
+          <input class="form-control p-2 mt-2" type="text" placeholder="what do you do eg CEO at XYZ Inc." aria-label="name">
+        </div>
+        <div class="mb-4">
+          <label>Education</label>
+          <input class="form-control p-2 mt-2" type="text" placeholder="where did you study from.." aria-label="name">
+        </div>
+      </div>
+
+      <div class="card p-4 gap-2 mt-4">
+        <h1>Branding</h1>
+        <div class="mb-4">
+          <label>Brand color</label>
+          <p class="text-secondary">Used for backgrounds, borders etc.</p>
+          <input class="form-control p-2 mt-2" type="text" placeholder="where did you study from.." aria-label="name">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,1 +1,17 @@
-<p>profile-dropdown works!</p>
+<div class="card d-flex text-start p-3">
+  <div class="">
+    <button class="text-secondary btn btn-outline-light text-start border-0 fw-bold text-decoration-none d-block">
+      Mutungi Ambrozio
+      <span>&#64;lovisambrose</span>
+    </button>
+  </div>
+  <hr>
+  <div class="d-flex flex-column">
+    <button class="btn btn-outline-light text-secondary border-0 text-start m-1 text-start">Dashboard</button>
+    <button (click)="goToCreateNew()" class="btn btn-outline-light text-secondary border-0 text-start m-1 text-start">Create Post</button>
+    <button class="btn btn-outline-light text-secondary border-0 text-start m-1 text-start">Reading list</button>
+    <button (click)="goToSettings()" class="btn btn-outline-light text-secondary border-0 text-start m-1 text-start">Settings</button>
+  </div>
+  <hr>
+  <button class="btn btn-outline-light text-secondary border-0 m-1 text-start">Sign Out</button>
+</div>
