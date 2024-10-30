@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {CommonModule} from "@angular/common";
-import {SyntaxNode} from "../../utils/shared";
 import {TreeModule} from "primeng/tree";
 import {TreeNode} from "primeng/api";
 
