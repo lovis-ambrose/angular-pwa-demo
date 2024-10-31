@@ -25,6 +25,7 @@ export class ProfileSettingsComponent {
   isChecked = false;
   previewUrl: string = 'https://www.flaticon.com/free-icon/user_219986';
   selectedFileName: string | null = null;
+  selectedColor: string = '#0000ff';
 
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
